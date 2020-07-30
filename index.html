@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<title>Home | Meducation Foundation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="animate.css">
+
+<script src="wow.min.js"></script>
+<script>
+new WOW().init();
+</script>
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  min-height: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides, .testimonialSlideshow {
+  display: none;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.w3-button {
+  padding: 16px;
+}
+
+.button {
+  border: 1px solid white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: #8B0000;
+}
+
+.button2 {
+  background-color: transparent;
+  color: white;
+}
+
+.button1:hover, .button2:hover {
+  background-color: #8B0000;
+  border: 1px solid #8B0000;
+  color: white;
+}
+
+.arrow, .activeTab{
+  color: #8B0000;
+}
+.arrow:hover{
+  color:tomato;
+}
+
+.fa{
+  cursor:pointer;
+}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="./home.html" class="w3-bar-item w3-button w3-wide activeTab" style="color: black"><img src="logo.png" style="height:50px">MEDUCATION</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="color: gray;padding-top: 12px">
+      <a href="./about.html" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="./join us.html" class="w3-bar-item w3-button">JOIN US</a>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button" style="padding: 8px 16px">SERVICES</button>
+        <div class="w3-dropdown-content w3-bar-block w3-border">
+          <a href="./consultation.html" class="w3-bar-item w3-button">CONSULTATION</a>
+          <a href="./financial aid.html" class="w3-bar-item w3-button">FINANCIAL AID</a>
+        </div>
+      </div>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button" style="padding: 8px 16px">EVENTS</button>
+        <div class="w3-dropdown-content w3-bar-block w3-border">
+          <a href="./workshops.html" class="w3-bar-item w3-button">WORKSHOPS</a>
+          <a href="./conferences.html" class="w3-bar-item w3-button">CONFERENCES</a>
+          <a href="./fundraisers.html" class="w3-bar-item w3-button">FUNDRAISERS</a>
+        </div>
+      </div>
+      <a href="./partners.html" class="w3-bar-item w3-button">PARTNERS</a>
+      <a href="./contact.html" class="w3-bar-item w3-button">CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<script>
+  // Add active class to the current tab (change font color)
+  var header = document.getElementById("myNavbar");
+  var btns = header.getElementsByClassName("w3-bar-item w3-button");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("activeTab");
+    current[0].className = current[0].className.replace(" activeTab", "");
+    this.className += " activeTab";
+    });
+  }
+</script>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Slideshow container -->
+<header class="slideshow-container w3-display-container w3-grayscale-min" id="home">
+
+    <!-- Full-width images with number and caption text -->  
+    <div class="mySlides fade">
+      <img src="http://cdn9.dissolve.com/p/D1330_1_012/D1330_1_012_0004_600.jpg" style="height:800px">
+      <div class="w3-display-middle w3-center w3-text-white" style="padding:48px">
+        <div class="fadeInUp animated">
+            <span class="w3-xxxlarge w3-hide-small">Consultation Service</span><br><br>
+            <span class="w3-large">Receive guidance and mentorship from upper years who can help make the path to medicine as easy as possible.</span>
+        </div>
+        <br><br>
+        <div class="w3-bar fadeInUp animated">
+            <a href="https://forms.gle/y82t87UPHuoSRNcV7" target="_blank"><button class="button button1 w3-round w3-large">Sign Up</button></a>
+            <a href="./consultation.html"><button class="button button2 w3-round w3-large">Learn More</button></a>
+        </div>
+      </div> 
+    </div>
+
+    <div class="mySlides fade">
+      <img src="http://cdn9.dissolve.com/p/D1330_1_012/D1330_1_012_0004_600.jpg" style="height:800px">
+      <div class="w3-display-middle w3-center w3-text-white" style="padding:48px">
+        <div class="fadeInUp animated">
+            <span class="w3-xxxlarge w3-hide-small">Ambassador Program</span><br><br>
+            <span class="w3-large">Join the team as an ambassador and learn more about the pathway to a career in medicine.</span>
+        </div>
+        <br><br>
+        <div class="w3-bar fadeInUp animated">
+            <a href="https://forms.gle/cZuMeXCsPWZaQope7" target="_blank"><button class="button button1 w3-round w3-large">Sign Up</button></a>
+            <a href="./join us.html"><button class="button button2 w3-round w3-large">Learn More</button></a>
+        </div>
+      </div> 
+    </div>
+
+    <div class="mySlides fade">
+      <img src="http://cdn9.dissolve.com/p/D1330_1_012/D1330_1_012_0004_600.jpg" style="height:800px">
+      <div class="w3-display-middle w3-center w3-text-white" style="padding:48px">
+        <div class="fadeInUp animated">
+            <span class="w3-xxxlarge w3-hide-small">Inaugural Pre-Med Preparation Conference</span><br><br>
+            <span class="w3-large">Click Sign Up to apply to be a speaker.</span>
+        </div>
+        <br><br>
+        <div class="w3-bar fadeInUp animated">
+            <a href="https://forms.gle/7zfhyUymbx2G2xPd6" target="_blank"><button class="button button1 w3-round w3-large">Sign Up</button></a>
+            <a href="./conferences.html"><button class="button button2 w3-round w3-large">Learn More</button></a>
+        </div>
+      </div> 
+    </div>
+  
+  </header>
+
+  <!-- The dots/circles -->
+<div class="w3-center w3-display-bottommiddle" style="width:100%">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+var slides,dots;
+
+function showSlides() {
+    var i;
+    slides = document.getElementsByClassName("mySlides");
+    dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 10000); // Change image every 10 seconds
+}
+
+function plusSlides(position) {
+    slideIndex +=position;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    else if(slideIndex<1){slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+}
+
+function currentSlide(index) {
+    if (index> slides.length) {index = 1}
+    else if(index<1){index = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[index-1].style.display = "block";  
+    dots[index-1].className += " active";
+}
+</script>
+  
+<!-- Promo Section "Statistics" -->
+<div class="w3-container w3-row w3-center w3-padding-16 w3-opacity-min" style="background-color: #8B0000">
+    <div class="w3-col wow fadeIn animated" style="width: 17%">
+      <span><a href="./partners.html#stream"><img src="stream.png" class="w3-opacity" height="200px"></a></span>
+    </div>
+    <div class="w3-col wow fadeIn animated" style="width: 17%; padding-top: 20px" data-wow-delay="0.5s">
+      <span><a href="./partners.html#urncst"><img src="URNCST.png" class="w3-opacity" height="150px"></a></span>
+    </div>
+    <div class="w3-col wow fadeIn animated" style="width: 16%" data-wow-delay="1s">
+      <span><a href="./partners.html#fsst"><img src="FSST.png" class="w3-opacity" height="175px"></a></span>
+    </div>
+    <div class="w3-col" style="width: 16%">
+      <div class="wow fadeIn animated" data-wow-delay="1.5s">
+        <span><a href="./partners.html#stemFellowship"><img src="stemfellowship.png" class="w3-opacity" height="125px"></a></span>
+      </div>
+      <div class="wow fadeIn animated" data-wow-delay="2s">
+        <span><a href="./partners.html#panago"><img src="Panagologo.png" class="w3-opacity" height="30px"></a></span>
+      </div>
+    </div>
+    <div class="w3-col" style="width: 17%">
+      <div class="wow fadeIn animated" style="padding-top: 16px" data-wow-delay="2.5s">
+        <span><a href="./partners.html#socirc"><img src="socirc.png" class="w3-opacity" height="70px"></a></span>
+      </div>
+      <div class="wow fadeIn animated" style="padding-top: 16px" data-wow-delay="3s">
+        <span><a href="./partners.html#brite"><img src="brite.png" class="w3-opacity" height="70px"></a></span>
+      </div>
+    </div>
+    <div class="w3-col wow fadeIn animated" style="width: 17%; padding-top: 16px" data-wow-delay="3.5s">
+      <span><a href="./partners.html#plyc"><img src="plyc.png" class="w3-opacity" height="150px"></a></span>
+    </div>
+  </div>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px">
+  <h3 class="w3-center" style="color: #8B0000">WHO WE ARE</h3>
+  <p class="w3-center w3-large" style="padding-left:140px;padding-right:140px">We are a non-profit organization committed to helping students with aspirations in pursuing a career in medicine. We hope to alleviate the problems that many aspiring medical students face in today's day and age.</p>
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-third">
+      <div class="w3-center">
+        <a href="#Accessibility"><i class="fa fa-line-chart w3-margin-bottom w3-jumbo" style="color: orange"></i></a>
+        <p class="w3-large"><strong>Accessibility</strong></p>
+      </div>      
+      <ul class="w3-left" style="color: gray">
+        <li>Financial considerations often deter students from their pursuit for higher education in the medical fields</li>
+        <li>There is a lack of career-specific financial support (e.g. scholarships/bursaries) provided for high school seniors to prepare them for their pre-med undergraduate years</li>
+      </ul>
+    </div>
+    <div class="w3-third">
+      <div class="w3-center">
+        <a href="#Transparency"><i class="fa fa-leanpub w3-margin-bottom w3-jumbo" style="color: tomato"></i></a>
+        <p class="w3-large"><strong>Transparency</strong></p>
+      </div>
+      <ul class="w3-left" style="color: gray">
+        <li>The path to a medical career is complex and requires intensive research into various options to proceed throughout one’s education</li>
+        <li>The process tends to be unclear and it is difficult to access a clearer overall big picture of the medical journey</li>
+      </ul>
+    </div>
+    <div class="w3-third">
+      <div class="w3-center">
+        <a href="#Guidance & Planning"><i class="fa fa-users w3-margin-bottom w3-jumbo" style="color: #8B0000"></i></a>
+        <p class="w3-large"><strong>Guidance & Planning</strong></p>
+      </div>
+      <ul class="w3-left" style="color: gray">
+        <li>Medical schools in Canada are notorious for having an extremely competitive application process: requiring a 4.0 GPA and stellar extracurriculars to be considered as a candidate</li>
+        <li>Many students are intimidated by these prerequisites and, despite having a passion for the field, abandon it for other interests</li>
+      </ul>
+    </div>
+    <h6 class="w3-center"><strong>SEE OUR SOLUTIONS </strong><a href="#Accessibility"><i class="fa fa-arrow-down"></i></a></h6>
+  </div>
+</div>
+
+<!-- Accessibility -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="Accessibility">
+  <div class="w3-row-padding">
+    <div class="w3-col m6 wow fadeInRight animated">
+      <h3>Accessible platform for youths of all backgrounds</h3>
+      <p style="color: gray">By providing necessary financial support through means of <a href="./financial aid.html">scholarships/bursaries/honorariums</a>, Meducation can provide students-in-need with the financial liberty to pursue their medical aspirations. 
+        The rewarded sum for overall excellence in academic merit and/or extracurricular involvement and/or financial requirement provides youths of all backgrounds gain the opportunity to gain a leverage to 
+        compete equitably. Our consultation services are also provided at affordable rates which can be accessed online by almost all households in Canada.</p>
+    </div>
+    <div class="w3-col m6 wow fadeInLeft animated">
+      <img class="w3-image w3-round-large w3-opacity" src="summerscholarships.jpg" alt="Accessibility" width="700" height="394">
+    </div>
+  </div>
+</div>
+
+<!-- Transparency -->
+<div class="w3-container" style="padding:128px 16px" id="Transparency">
+  <div class="w3-row-padding">
+    <div class="w3-col m6 wow fadeInRight animated">
+      <img class="w3-image w3-round-large w3-opacity" src="medicalconference.jpg" alt="Transparency" width="700" height="394">
+    </div>
+    <div class="w3-col m6 w3-right-align wow fadeInLeft animated">
+      <h3>Providing clarity and insight</h3>
+      <p style="color: gray">Though working in medicine is a long process, Meducation can alleviate previous misconceptions and potential obstacles through providing resources which condense the academic pathway to medicine. 
+        Besides understanding the step-by-step process in medicine, students can also gain insight from current medical professionals with a diverse range of specializations through Meducation’s <a href="./workshops.html">workshops</a>, 
+        <a href="./conferences.html">conferences</a>, and events in general.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Guidance & Planning -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="Guidance & Planning">
+  <div class="w3-row-padding">
+    <div class="w3-col m6 wow fadeInRight animated">
+      <h3>Mentorship and consulting programs</h3>
+      <p style="color: gray">With our <a href="./consultation.html">consultation program</a>, students do not have to blindly struggle with the problems that they are facing. Using the knowledge and guidance of upper years, they can easily sidestep common obstacles to make the path to medicine as easy as possible.</p>
+    </div>
+    <div class="w3-col m6 wow fadeInLeft animated">
+      <img class="w3-image w3-round-large w3-opacity" src="mentorship.jpg" alt="Guidance & Planning" width="700" height="394">
+    </div>
+  </div>
+</div>
+
+  <!-- Testimonials -->
+  <div class="w3-row-padding" style="padding-bottom: 64px" id="testimonials">
+    <div class="w3-center w3-padding-64">
+      <span class="w3-xlarge w3-bottombar w3-border-gray w3-padding-16">Meducation Stories</span>
+    </div>
+
+    <div class="w3-padding">
+      <div class="w3-left w3-xxlarge w3-padding-64" onclick="plusDivs(-1)"><i class="fa fa-arrow-circle-left arrow"></i></div>
+
+      <div class="testimonialSlideshow">
+        <div class="w3-third wow fadeInLeft animated" style="padding-left: 130px">
+          <div class="w3-card-4">
+            <img src="/w3images/team1.jpg" alt="John" style="width:100%">
+            <div class="w3-container">
+              <h3>Jane Doe</h3>
+              <p class="w3-opacity">Gr. 12 Student</p>
+              <p class="w3-opacity"><i class="fa fa-map-marker w3-margin-right" style="font-size:20px"></i>William Lyon Mackenzie Collegiate Institute</p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-half w3-panel wow fadeInRight animated" data-wow-delay="0.5s" style="padding-left: 50px">
+           <span style="font-size:150px;line-height:0.6em;opacity:0.2;color: tomato">❝</span>
+           <p class="w3-large" style="margin-top:-40px;color: #8B0000;text-shadow:1px 1px 0 rgb(170, 170, 170)"><b><i>The guidance that the Meducation Foundation provides to students in high school and undergraduate studies is unparalleled.</i></b></p>
+        </div>
+      </div>
+
+      <div class="testimonialSlideshow">
+        <div class="w3-third fadeInLeft animated" style="padding-left: 130px">
+          <div class="w3-card-4">
+            <img src="/w3images/team1.jpg" alt="John" style="width:100%">
+            <div class="w3-container">
+              <h3>John Doe</h3>
+              <p class="w3-opacity">2nd Year Student</p>
+              <p class="w3-opacity"><i class="fa fa-map-marker w3-margin-right" style="font-size:20px"></i>Western University</p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-half w3-panel fadeInRight animated" style="padding-left: 50px;animation-delay: 0.5s">
+           <span style="font-size:150px;line-height:0.6em;opacity:0.2;color: tomato">❝</span>
+           <p class="w3-large" style="margin-top:-40px;color: #8B0000;text-shadow:1px 1px 0 rgb(170, 170, 170)"><b><i>Meducation Foundation has a strong vision and provides many fascinating opportunities.</i></b></p>
+        </div>
+      </div>
+
+      <div class="testimonialSlideshow">
+        <div class="w3-third fadeInLeft animated" style="padding-left: 130px">
+          <div class="w3-card-4">
+            <img src="/w3images/team1.jpg" alt="John" style="width:100%">
+            <div class="w3-container">
+              <h3>Mike Ross</h3>
+              <p class="w3-opacity">3rd Year Health Sciences Student</p>
+              <p class="w3-opacity"><i class="fa fa-map-marker w3-margin-right" style="font-size:20px"></i>McMaster University</p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-half w3-panel fadeInRight animated" style="padding-left: 50px;animation-delay: 0.5s">
+           <span style="font-size:150px;line-height:0.6em;opacity:0.2;color: tomato">❝</span>
+           <p class="w3-large" style="margin-top:-40px;color: #8B0000;text-shadow:1px 1px 0 silver"><b><i>Gathering information for medical schools is tough, luckily the Meducation Foundation is here to make that information as accessible as possible.</i></b></p>
+        </div>
+      </div>
+
+      <div class="testimonialSlideshow">
+        <div class="w3-third fadeInLeft animated" style="padding-left: 130px">
+          <div class="w3-card-4">
+            <img src="/w3images/team1.jpg" alt="John" style="width:100%">
+            <div class="w3-container">
+              <h3>Mike Ross</h3>
+              <p class="w3-opacity">2nd Year Student</p>
+              <p class="w3-opacity"><i class="fa fa-map-marker w3-margin-right" style="font-size:20px"></i>Western University</p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-half w3-panel fadeInRight animated" style="padding-left: 50px;animation-delay: 0.5s">
+           <span style="font-size:150px;line-height:0.6em;opacity:0.2;color: tomato">❝</span>
+           <p class="w3-large" style="margin-top:-40px;color: #8B0000;text-shadow:1px 1px 0 silver"><b><i>When I was in high school, I wish I had the opportunities that the Meducation Foundation provides!</i></b></p>
+        </div>
+      </div>
+
+      <div class="testimonialSlideshow">
+        <div class="w3-third fadeInLeft animated" style="padding-left: 130px">
+          <div class="w3-card-4">
+            <img src="/w3images/team1.jpg" alt="John" style="width:100%">
+            <div class="w3-container">
+              <h3>Mike Ross</h3>
+              <p class="w3-opacity">Undergrad Student</p>
+              <p class="w3-opacity"><i class="fa fa-map-marker w3-margin-right" style="font-size:20px"></i>McMaster University</p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-half w3-panel fadeInRight animated" style="padding-left: 50px;animation-delay: 0.5s">
+           <span style="font-size:150px;line-height:0.6em;opacity:0.2;color: tomato">❝</span>
+           <p class="w3-large" style="margin-top:-40px;color: #8B0000;text-shadow:1px 1px 0 silver"><b><i>Meducation Foundation allows students to build effective networks that provide great support.</i></b></p>
+        </div>
+      </div>
+
+      <div class="w3-right w3-xxlarge w3-padding-64" onclick="plusDivs(1)"><i class="fa fa-arrow-circle-right arrow"></i></div>
+     </div>
+
+     <script>
+      var slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("testimonialSlideshow");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+      }
+      </script>
+  </div>
+
+<!-- Footer -->
+<footer class="w3-center w3-padding-64" style="background-color: #8B0000;color: white">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/MeducationFoundation/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/meducationfoundation/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
