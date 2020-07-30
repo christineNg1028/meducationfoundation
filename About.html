@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<title>About | Meducation Foundation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="animate.css">
+
+<script src="wow.min.js"></script>
+<script>
+new WOW().init();
+</script>
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  min-height: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides, .testimonialSlideshow {
+  display: none;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.w3-button {
+  padding: 16px;
+}
+
+.button {
+  border: 1px solid white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white;
+  color: #8B0000;
+}
+
+.button2 {
+  background-color: transparent;
+  color: white;
+}
+
+.button1:hover, .button2:hover {
+  background-color: #8B0000;
+  border: 1px solid #8B0000;
+  color: white;
+}
+
+.arrow, .activeTab{
+  color: #8B0000;
+}
+.arrow:hover{
+  color:red;
+}
+
+.fa{
+  cursor:pointer;
+}
+
+.mySlides{
+  display:none;
+}
+
+.member{
+  height: 233px;
+  width: 350px;
+  background-color: black;
+  opacity: 0.75;
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 16px;
+}
+
+#card:hover + .member{
+  display: block;
+}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="./home.html" class="w3-bar-item w3-button w3-wide" style="color: black"><img src="logo.png" style="height:50px">MEDUCATION</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="color: gray;padding-top: 12px">
+      <a href="./about.html" class="w3-bar-item w3-button activeTab">ABOUT</a>
+      <a href="./join us.html" class="w3-bar-item w3-button">JOIN US</a>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button" style="padding: 8px 16px">SERVICES</button>
+        <div class="w3-dropdown-content w3-bar-block w3-border">
+          <a href="./consultation.html" class="w3-bar-item w3-button">CONSULTATION</a>
+          <a href="./financial aid.html" class="w3-bar-item w3-button">FINANCIAL AID</a>
+        </div>
+      </div>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button" style="padding: 8px 16px">EVENTS</button>
+        <div class="w3-dropdown-content w3-bar-block w3-border">
+          <a href="./workshops.html" class="w3-bar-item w3-button">WORKSHOPS</a>
+          <a href="./conferences.html" class="w3-bar-item w3-button">CONFERENCES</a>
+          <a href="./fundraisers.html" class="w3-bar-item w3-button">FUNDRAISERS</a>
+        </div>
+      </div>
+      <a href="./partners.html" class="w3-bar-item w3-button">PARTNERS</a>
+      <a href="./contact.html" class="w3-bar-item w3-button">CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<script>
+  // Add active class to the current tab (change font color)
+  var header = document.getElementById("myNavbar");
+  var btns = header.getElementsByClassName("w3-bar-item w3-button");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("activeTab");
+    current[0].className = current[0].className.replace(" activeTab", "");
+    this.className += " activeTab";
+    });
+  }
+</script>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- About Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="about">
+  <h3 class="w3-center" style="color: #8B0000">ABOUT US</h3>
+
+  <div class="w3-content w3-display-container">
+
+    <!--<div class="w3-display-container mySlides">
+      <img src="studymed.jpg" style="width:100%">
+      <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+        Meducation Foundation
+      </div>
+    </div>
+    
+    <div class="w3-display-container mySlides">
+      <img src="studymed.jpg" style="width:100%">
+      <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+        Meducation Foundation
+      </div>
+    </div>
+    
+    <div class="w3-display-container mySlides">
+      <img src="studymed.jpg" style="width:100%">
+      <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+        Meducation Foundation
+      </div>
+    </div>
+    
+    <div class="w3-display-container mySlides">
+      <img src="studymed.jpg" style="width:100%">
+      <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
+        Meducation Foundation
+      </div>
+    </div>-->
+    
+    <div class="w3-display-container mySlides">
+      <img src="teamplaceholder.jpg" style="width:100%">
+      <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+        Meducation Foundation
+      </div>
+    </div>
+    
+    <!--<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+    <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>-->
+
+  </div>
+
+  <div class="w3-container" style="padding:75px 16px">
+    <div class="w3-row-padding">
+      <div class="wow fadeInLeft animated" style="padding-left: 105px;padding-right: 105px">
+        <i class="w3-jumbo fa fa-lightbulb-o" style="color: #8B0000"></i>  
+        <h2>The Meducation Mission</h2>
+        <p class="w3-large" style="color: gray">Meducation Foundation aims to provide opportunities, resources, and platforms for students of all backgrounds - we believe that all students deserve equal footing in their academic journey towards medicine and we work towards establishing accessibility and transparency throughout this process.</p>
+      </div>
+      <!--<div class="w3-col m6 w3-right-align wow fadeInRight animated" style="padding-right: 105px">
+        <img class="w3-image w3-round-large" src="/w3images/phone_buildings.jpg" alt="Promo Vid" width="700" height="394">
+      </div>-->
+    </div>
+  </div>
+
+</div>
+    
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 10000); // Change image every 10 seconds
+}
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+</script>
+
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h3 class="w3-center" style="color: #8B0000">THE TEAM</h3>
+  <p class="w3-center w3-large">Ontario Provincial Board</p>
+
+  <div style="margin-top:64px">
+    <div class="w3-half w3-margin-bottom" style="padding-left: 235px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Joy"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Joy Xu</h3>
+          <p class="w3-opacity">CEO & Co-Founder</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-half w3-margin-bottom" style="padding-left: 45px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Vedish"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Vedish Soni</h3>
+          <p class="w3-opacity">CEO & Co-Founder</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:64px">
+    <div class="w3-third w3-margin-bottom" style="padding-left: 16px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Milen"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Milen Belanger</h3>
+          <p class="w3-opacity">Chief Financial Officer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom" style="padding-left: 35px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Chris"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Chris Ho</h3>
+          <p class="w3-opacity">Event Coordinator</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom" style="padding-left: 50px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Apurva"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Apurva Dixit</h3>
+          <p class="w3-opacity">Event Coordinator</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:64px">
+    <div class="w3-third w3-margin-bottom" style="padding-left: 16px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Bryan"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Bryan Sun</h3>
+          <p class="w3-opacity">Fundraising Coordinator</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom" style="padding-left: 35px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Cheng"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Cheng'En Xi</h3>
+          <p class="w3-opacity">Fundraising Coordinator</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom" style="padding-left: 50px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Zain"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Zain Altaf</h3>
+          <p class="w3-opacity">Fundraising Coordinator</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:64px">
+    <div class="w3-third w3-margin-bottom" style="padding-left: 16px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Akhil"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Akhil Kumar</h3>
+          <p class="w3-opacity">Operations Director</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom" style="padding-left: 35px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Abhishek"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Abhishek Baburaj</h3>
+          <p class="w3-opacity">Operations Director</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom" style="padding-left: 50px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Stuart"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Stuart</h3>
+          <p class="w3-opacity">Sponsorship Coordinator</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:64px">
+    <div class="w3-third w3-margin-bottom" style="padding-left: 16px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Mirana"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Mirana</h3>
+          <p class="w3-opacity">Sponsorship Coordinator</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom" style="padding-left: 35px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Victor"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Victor</h3>
+          <p class="w3-opacity">Sponsorship Coordinator</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom" style="padding-left: 50px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Sabrina"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Sabrina Chowdhury</h3>
+          <p class="w3-opacity">Design Officer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:64px">
+    <div class="w3-third w3-margin-bottom" style="padding-left: 16px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Christine"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Christine Ng</h3>
+          <p class="w3-opacity">Website Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom" style="padding-left: 35px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Alec"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Alec Wang</h3>
+          <p class="w3-opacity">Public Relations Officer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-third w3-margin-bottom" style="padding-left: 50px">
+      <div class="w3-card w3-center" style="width: 350px;display: block;position: relative">
+        <a id="card"><img src="person.jpg" style="width: 350px" alt="Valerie"></a>
+        <div class="w3-container member" style="color: white">
+          <h3>Valerie Phu</h3>
+          <p class="w3-opacity">Public Relations Officer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-padding-64" style="background-color: #8B0000;color: white">
+  <a href="#about" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/MeducationFoundation/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/meducationfoundation/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>

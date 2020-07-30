@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<title>Partners | Meducation Foundation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="animate.css">
+
+<script src="wow.min.js"></script>
+<script>
+new WOW().init();
+</script>
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+
+.w3-button {
+  padding: 16px;
+}
+
+.activeTab{
+  color: #8B0000;
+}
+
+.fa{
+  cursor:pointer;
+}
+
+.rectangle {
+  height: 300px;
+  width: 100px;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #8B0000;
+}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="./home.html" class="w3-bar-item w3-button w3-wide" style="color: black"><img src="logo.png" style="height:50px">MEDUCATION</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small" style="color: gray;padding-top: 12px">
+      <a href="./about.html" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="./join us.html" class="w3-bar-item w3-button">JOIN US</a>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button" style="padding: 8px 16px">SERVICES</button>
+        <div class="w3-dropdown-content w3-bar-block w3-border">
+          <a href="./consultation.html" class="w3-bar-item w3-button">CONSULTATION</a>
+          <a href="./financial aid.html" class="w3-bar-item w3-button">FINANCIAL AID</a>
+        </div>
+      </div>
+      <div class="w3-dropdown-hover">
+        <button class="w3-button" style="padding: 8px 16px">EVENTS</button>
+        <div class="w3-dropdown-content w3-bar-block w3-border">
+          <a href="./workshops.html" class="w3-bar-item w3-button">WORKSHOPS</a>
+          <a href="./conferences.html" class="w3-bar-item w3-button">CONFERENCES</a>
+          <a href="./fundraisers.html" class="w3-bar-item w3-button">FUNDRAISERS</a>
+        </div>
+      </div>
+      <a href="./partners.html" class="w3-bar-item w3-button activeTab">PARTNERS</a>
+      <a href="./contact.html" class="w3-bar-item w3-button">CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+  
+<script>
+    // Add active class to the current tab (change font color)
+    var header = document.getElementById("myNavbar");
+    var btns = header.getElementsByClassName("w3-bar-item w3-button");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("activeTab");
+      current[0].className = current[0].className.replace(" activeTab", "");
+      this.className += " activeTab";
+      });
+    }
+</script>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Partners Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="partners">
+  <h3 class="w3-center" style="color: #8B0000">OUR PARTNERS</h3>
+  <p class="w3-center w3-large" style="color: black">The Meducation Foundation is grateful to its generous sponsors.</p>
+  
+  <div class="w3-container w3-light-grey" style="padding-top: 128px;padding-left: 60px" id="stream">
+    <div class="w3-row-padding">
+      <div class="w3-col m6 rectangle wow fadeInLeft animated" style="box-shadow: -15px 15px silver">
+        <h3><strong>STREAM Syndicate</strong></h3>
+        <br>
+        <p style="color: gray">A federal nonprofit provides educational opportunities with practical
+          experiences outside the classroom. With a bimonthly focus on each subject
+          of STREAM, all members gain the enriching experiences of
+          interdisciplinary learning year-round.</p>
+        <p>Visit their website: <a href="https://www.streamsyndicate-canada.com/" target="_blank">www.streamsyndicate-canada.com</a></p>
+        <a href="https://www.facebook.com/STREAMsyndicate/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com/stream_syndicate/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+      </div>
+      <div class="w3-col m6 wow fadeInRight animated" style="padding-left: 110px">
+        <img src="stream.png" alt="STREAM Syndicate" width="400" height="375">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-light-grey" style="padding-right: 60px" id="urncst">
+    <div class="w3-row-padding">
+      <div class="w3-col m6 wow fadeInLeft animated" style="padding-left: 55px">
+        <img src="URNCST.png" alt="URNCST" width="425" height="300">
+      </div>
+      <div class="w3-col m6 rectangle w3-right-align wow fadeInRight animated" style="box-shadow: 15px 15px silver">
+        <h3><strong>URNCST</strong></h3>
+        <br>
+        <p style="color: gray">The Undergraduate Research in Natural and Clinical Science and
+          Technology Journal is the leading open access, indexed, peer-reviewed
+          publication for undergraduate research conferences and case
+          competitions.</p>
+        <p>Visit their website: <a href="https://urncst.com/index.php/urncst" target="_blank">www.urncst.com</a></p>
+        <a href="https://www.facebook.com/urncst" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://twitter.com/urncst" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+        <a href="https://www.linkedin.com/company/urncst" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-light-grey" style="padding-left: 60px" id="fsst">
+    <div class="w3-row-padding" style="padding-top: 75px">
+      <div class="w3-col m6 rectangle wow fadeInLeft animated" style="box-shadow: -15px 15px silver">
+        <h3><strong>Foundation for Student Science & Tech</strong></h3>
+        <br>
+        <p style="color: gray">A national not-for-profit organization dedicated to developing the career
+          potential of students for leadership roles in the science community.</p>
+        <p>Visit their website: <a href="http://journal.fsst.ca/jsst/index.php/jsst/index?fbclid=IwAR0crKBs-EnON-e9J9UFkUuzJv8DN94WifPPAHq10LWgQyrgTj4BOdgyX2o" target="_blank">www.fsst.ca</a></p>
+        <a href="https://www.facebook.com/TheFSST" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com/fsst.ca/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="https://twitter.com/TheFSST" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+        <a href="https://www.linkedin.com/company/canadian-young-scientist-journal?trk=tyah&trkInfo=idx%3A1-1-1%2CtarId%3A1421241250309%2Ctas%3Afoundation+for+student+sc" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+      </div>
+      <div class="w3-col m6 wow fadeInRight animated" style="padding-left: 80px">
+        <img src="FSST.png" alt="FSST" width="400" height="375">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-light-grey" style="padding-right: 60px" id="stemFellowship">
+    <div class="w3-row-padding">
+      <div class="w3-col m6 wow fadeInLeft animated" style="padding-left: 65px">
+        <img src="stemfellowship.png" alt="STEM Fellowship" width="400" height="350">
+      </div>
+      <div class="w3-col m6 rectangle w3-right-align wow fadeInRight animated" style="box-shadow: 15px 15px silver">
+        <h3><strong>STEM Fellowship</strong></h3>
+        <br>
+        <p style="color: gray">STEM Fellowship is a Canadian student-run, non-profit organization
+          that equips the next generation of student researchers and innovators
+          with skills in data science and scholarly writing.</p>
+        <p>Visit their website: <a href="http://stemfellowship.org/" target="_blank">www.stemfellowship.org</a></p>
+        <a href="https://www.facebook.com/STEMFellowship/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com/stem_fellowship/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="https://twitter.com/stem_fellowship" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+        <a href="https://linkedin.com/company/stem-fellowship" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-light-grey" style="padding-left: 60px" id="panago">
+    <div class="w3-row-padding" style="padding-top: 25px">
+      <div class="w3-col m6 rectangle wow fadeInLeft animated" style="box-shadow: -15px 15px silver">
+        <h3><strong>Panago</strong></h3>
+        <br>
+        <p style="color: gray">Panago is a Canadian pizza delivery and takeout chain with about 200
+          locations across 6 provinces.</p>
+        <p>Visit their website: <a href="https://www.panago.com/" target="_blank">www.panago.com</a></p>
+        <a href="https://www.facebook.com/panago" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com/panago_pizza/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="https://twitter.com/Panago_Pizza" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+      </div>
+      <div class="w3-col m6 wow fadeInRight animated" style="padding-top: 75px;padding-left: 40px">
+        <img src="Panagologo.png" alt="Panago" width="550" height="150">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-light-grey" style="padding-right: 60px" id="socirc">
+    <div class="w3-row-padding" style="padding-top: 75px">
+      <div class="w3-col m6 wow fadeInLeft animated" style="padding-top: 45px;padding-left: 16px">
+        <img src="socirc.png" alt="SoCirC" width="500" height="180">
+      </div>
+      <div class="w3-col m6 rectangle w3-right-align wow fadeInRight animated" style="box-shadow: 15px 15px silver">
+        <h3><strong>Social Circus Circle (SoCirC)</strong></h3>
+        <br>
+        <p style="color: gray">SoCirC (Social Circus Circle) is a Toronto based, charitable non-profit
+          organization, that uses a social circus modality, providing social development
+          and support through the physical activity and creativity of circus arts</p>
+        <p>Visit their website: <a href="http://www.socirc.ca/" target="_blank">www.socirc.ca</a></p>
+        <a href="https://www.facebook.com/SoCirC/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com/socirc/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-light-grey" style="padding-left: 60px" id="brite">
+    <div class="w3-row-padding" style="padding-top: 75px">
+      <div class="w3-col m6 rectangle wow fadeInLeft animated" style="box-shadow: -15px 15px silver">
+        <h3><strong>Black Researcher's Initiative to Empower (B.R.I.T.E.)</strong></h3>
+        <br>
+        <p style="color: gray">Our vision is to offer undergraduate and graduate students in science and
+          medicine streams a platform to connect, network and gain support from
+          fellow like-minded students.</p>
+        <a href="https://twitter.com/uoftbrite?lang=en" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+      </div>
+      <div class="w3-col m6 wow fadeInRight animated" style="padding-top: 75px;padding-left: 55px">
+        <img src="brite.png" alt="BRITE" width="525" height="150">
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-container w3-light-grey" style="padding-right: 60px" id="plyc">
+    <div class="w3-row-padding" style="padding-top: 75px">
+      <div class="w3-col m6 wow fadeInLeft animated" style="padding-left: 115px">
+        <img src="plyc.png" alt="PLYC" width="300" height="300">
+      </div>
+      <div class="w3-col m6 rectangle w3-right-align wow fadeInRight animated" style="box-shadow: 15px 15px silver">
+        <h3><strong>Prime Leaders Youth Collaborative</strong></h3>
+        <br>
+        <p style="color: gray">Prime Leaders Youth Collaborative is a registered non-profit organization
+          that seeks to educate, encourage, and empower high school students.</p>
+        <p>Visit their website: <a href="http://primeleaders.ca/" target="_blank">www.primeleaders.ca</a></p>
+        <a href="https://www.facebook.com/PrimeLeadersYC" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a href="https://www.instagram.com/primeleadersyc/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+        <a href="https://twitter.com/primeleadersYC" target="_blank"><i class="fa fa-twitter w3-hover-opacity"></i></a>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<div class="w3-container" style="padding:128px 115px">
+  <div class="w3-center" style="padding-bottom: 64px">
+    <span class="w3-xlarge w3-bottombar w3-border-gray w3-padding-16">We Need Your Support!</span>
+  </div>
+  <p class="w3-center w3-large" style="color: gray">By aligning yourself with young stakeholders, your company/
+    organization sends a positive message about your community
+    engagement and improve your brand recognition with present and future
+    customers. Your sponsorship to this organization will undoubtedly
+    inspire more students to be able to pursue a career in what they're truly
+    passionate about. We hope that you will join this movement alongside
+    youth across Canada and inspire action!
+    If you would like to learn more information about how to become a sponsor, or
+    would like a team member to make a presentation in person about a
+    potential corporate partnership, feel free to <a href="./contact.html">contact us</a>.
+    We look forward to seeing your involvement in our upcoming initiatives!</p>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-padding-64" style="background-color: #8B0000;color: white">
+  <a href="#partners" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/MeducationFoundation/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/meducationfoundation/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>

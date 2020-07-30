@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<title>Join Us | Meducation Foundation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="animate.css">
+
+<script src="wow.min.js"></script>
+<script>
+new WOW().init();
+</script>
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  scroll-behavior: smooth;
+}
+
+.w3-button {
+  padding: 16px;
+}
+
+.activeTab{
+  color: #8B0000;
+}
+
+.fa{
+  cursor:pointer;
+}
+
+.rectangle {
+  height: 300px;
+  width: 100px;
+  background-color: white;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #8B0000;
+}
+
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="./home.html" class="w3-bar-item w3-button w3-wide" style="color: black"><img src="logo.png" style="height:50px">MEDUCATION</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small" style="color: gray;padding-top: 12px">
+        <a href="./about.html" class="w3-bar-item w3-button">ABOUT</a>
+        <a href="./join us.html" class="w3-bar-item w3-button activeTab">JOIN US</a>
+        <div class="w3-dropdown-hover">
+          <button class="w3-button" style="padding: 8px 16px">SERVICES</button>
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="./consultation.html" class="w3-bar-item w3-button">CONSULTATION</a>
+            <a href="./financial aid.html" class="w3-bar-item w3-button">FINANCIAL AID</a>
+          </div>
+        </div>
+        <div class="w3-dropdown-hover">
+          <button class="w3-button" style="padding: 8px 16px">EVENTS</button>
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="./workshops.html" class="w3-bar-item w3-button">WORKSHOPS</a>
+            <a href="./conferences.html" class="w3-bar-item w3-button">CONFERENCES</a>
+            <a href="./fundraisers.html" class="w3-bar-item w3-button">FUNDRAISERS</a>
+          </div>
+        </div>
+        <a href="./partners.html" class="w3-bar-item w3-button">PARTNERS</a>
+        <a href="./contact.html" class="w3-bar-item w3-button">CONTACT</a>
+      </div>
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+<script>
+    // Add active class to the current tab (change font color)
+    var header = document.getElementById("myNavbar");
+    var btns = header.getElementsByClassName("w3-bar-item w3-button");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("activeTab");
+      current[0].className = current[0].className.replace(" activeTab", "");
+      this.className += " activeTab";
+      });
+    }
+</script>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Ambassador Program -->
+<img src="ambassador.jpg" class="w3-opacity" style="height:800px;width: 100%;">
+<div class="w3-display-middle w3-center" style="padding:128px 16px" id="ambassadors">
+  <h3 style="color: #8B0000">JOIN US</h3>
+  <br><br><br><br>
+  <div style="padding-left: 80px;padding-right: 80px">
+    <h3><strong>Am•bas•sa•dor</strong></h3>
+    <h4><strong><em>noun </em>/amˈbasədər/</strong></h4>
+    <p><strong>An ambassador represents and promotes something they are passionate about, whether it be an initiative, an organization, a field, etc. 
+      Their goal is to increase awareness and exposure to certain topics of interest, targeting a wide audience, so that these individuals too can develop a passion.</strong></p>
+  </div>
+</div>
+
+<div class="w3-container" style="padding:128px 16px">
+    <div class="w3-row-padding">
+      <div class="w3-col m6 wow fadeInLeft animated" style="padding-right: 42px;padding-left: 85px">
+        <i class="w3-jumbo fa fa-book" style="color: #8B0000"></i>  
+        <h3>What you do</h3>
+        <p>The ambassadors serve as the representatives of the Meducation Foundation. They are the front-end of the organization and a vital part of the development of all Meducation events.
+          Be a part of planning and promotion of initiatives including conferences, fundraisers, and consultation services.</p>    
+      </div>
+      <div class="w3-col m6 w3-right-align wow fadeInRight animated" style="padding-right: 85px;padding-left: 42px">
+        <i class="w3-jumbo fa fa-thumbs-up" style="color: #8B0000"></i>  
+        <h3>Benefits</h3>
+        <p>Meducation Foundation ambassadors gain insight into the world of medicine through access to unique experiences and social networking opportunities.
+          Experience personal development by helping others in the community.</p>
+      </div>
+    </div>
+    <br><br><br>
+    <h5 class="w3-center wow fadeInUp animated" style="color: gray;">Interested? Fill out the form <a href="https://forms.gle/cDZTnLonhGi1oEx26" target="_blank">here</a> to apply! Please contact us if you have any questions. Good luck!</h5>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-padding-64" style="background-color: #8B0000;color: white">
+  <a href="#ambassadors" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/MeducationFoundation/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/meducationfoundation/" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
